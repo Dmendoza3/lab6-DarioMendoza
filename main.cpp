@@ -73,7 +73,8 @@ int main()
             }
 
             case 3:{
-				int ind1, ind2;
+				cout << (*func[0]) * func[0];
+				/*int ind1, ind2;
 				//funciones* f1, f2;
 				cout << "Ingrese los dos indices de las funciones a multiplicar: ";
 				do{
@@ -81,7 +82,8 @@ int main()
 				}while(ind1 < 0 || ind2 < 0 || ind1 >= func.size() || ind2 >= func.size());
 				
 				resultados.push_back( (*func[ind1] * func[ind2]) );
-				cout << resultados.back() << endl;
+				cout << resultados.back() << endl;*/
+				cout << "No implementado";
                 break;
             }
 
@@ -91,7 +93,14 @@ int main()
             }
 
             case 5:{
+                int ind;
+                cout << "Ingrese el indice de la funcion: ";
+				
+				do{
+					cin >> ind;
+				}while(ind < 0 || ind >= func.size());
 
+                cout << "El factor comun es: " << ++(*func[ind]) << endl;
                 break;
             }
 

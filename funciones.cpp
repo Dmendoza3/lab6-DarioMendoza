@@ -15,16 +15,30 @@ void funciones::addC(int nCoeficiente)
     coeficientes.push_back(nCoeficiente);
     //coeficientes.insert(coeficientes.begin(), nCoeficiente);
 }
-/*ostream& funciones::operator<<(ostream& os, const funciones& f)
+
+void funciones::clear()
 {
-    int gr = grado;
+	coeficientes.clear();
+}
 
-    os << "f(x) = ";
-    for(int i = 0; i < coeficientes.size(); i++)
-    {
-        os << coeficientes[i] << "x^" << grado << " + ";
-        grado--;
-    }
+void funciones::set(funciones* nF)
+{
+	clear();
+	grado = nF->grado;
+	coeficientes = nF->coeficientes;
+}
 
-    return os;
-}*/
+void funciones::set(funciones nF)
+{
+	clear();
+	grado = nF.grado;
+	coeficientes = nF.coeficientes;
+}
+
+void funciones::add(funciones nF)
+{
+	for(int i = 0; i < coeficientes.size(); i++)
+	{
+		coeficientes[i] += nF.coeficientes[i];
+	}
+}
